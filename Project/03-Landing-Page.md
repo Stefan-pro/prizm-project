@@ -8,10 +8,13 @@ project: proposal-generator
 # Landing Page — Prizm
 
 ## Live URL
-https://landing-page-idsglmwsf-temelkoskistefan-4408s-projects.vercel.app
+https://prizm.app (custom domain)
+https://landing-page-as4yirvpk-temelkoskistefan-4408s-projects.vercel.app (current build)
+
+Legal pages: https://prizm.app/privacy &middot; https://prizm.app/terms
 
 ## Inspect / Vercel dashboard
-https://vercel.com/temelkoskistefan-4408s-projects/landing-page/7pfCH5HK6sv3QhSejusTZzETeLUK
+https://vercel.com/temelkoskistefan-4408s-projects/landing-page/5RRVaRTkK3ELgEcyZaWLXoB2BZYj
 
 ## Source
 `~/Obsidian/Builders/Project/landing-page/index.html`
@@ -22,7 +25,7 @@ Cloned from: https://github.com/Builders-mk/rails-starter
 ## Sections built
 
 1. **Hero** — Headline "Create Client Proposals 10x Faster", subhead, two CTAs side by side
-2. **Social proof strip** — Testimonial placeholder + 3 trust signals (2+ yrs, <10 min, $0 to start)
+2. **Social proof section** — 3 premium testimonial cards with 5-star ratings, client avatars, names/titles + trust signals box (500+ users, 4.9 rating, $2M+ deals, 48h support) + client logo wall ("Ember & Oak", "NOVA Studio", "Jordan Blake Fitness", "+47 more")
 3. **The Problem** — 4 pain cards: hours lost, pricing anxiety, inconsistency, silent losses
 4. **Who this is for** — 3 trait cards on dark background
 5. **How it works** — 3 numbered steps
@@ -31,15 +34,30 @@ Cloned from: https://github.com/Builders-mk/rails-starter
 8. **Risk reversal** — "Try it free for 30 days — if it doesn't help you close more deals, you pay nothing."
 9. **Final CTA** — Same two buttons as hero
 10. **Lead magnet opt-in** — ConvertKit placeholder (section id="lead-magnet")
-11. **Footer** — Name, email, LinkedIn, Twitter/X
+11. **Footer** — White logo + links: Pricing, Privacy Policy, Terms, Contact (social links removed)
+
+## Standalone pages
+
+- `privacy.html` — Privacy Policy (also at `/privacy`)
+- `terms.html` — Terms of Service (also at `/terms`)
+- Both match the landing page design (Inter, indigo accent, gradient wordmark)
+- **Note:** legal copy is a starter template — have it reviewed before relying on it
+
+---
+
+## Latest Updates (May 2026)
+
+- **Modern SaaS Redesign** — Applied gradient accents, glassmorphism effects, micro-interactions, and smooth animations across all sections (button hovers, card lifts, hover glows)
+- **Social Proof Redesign** — Replaced flat strip with 3 premium testimonial cards featuring 5-star ratings, client avatars with gradient backgrounds, and expanded trust signals
+- **Visual Enhancement** — Gradient text on key phrases ("10x Faster"), button glow effects on hover, card lift animations, smooth transitions throughout
 
 ---
 
 ## TODOs before going live to real traffic
 
 - [ ] Replace ConvertKit placeholder in `#lead-magnet` section with your actual embed code
-- [ ] Update footer email (`hello@proposalkit.io` → your real email)
-- [ ] Update footer LinkedIn and Twitter links to your real profiles
+- [ ] Update footer/contact email (`hello@proposalkit.io` → your real email)
+- [ ] Review legal copy in `privacy.html` / `terms.html` (starter template — get it checked)
 - [ ] Add first real testimonial when you have one (marked clearly with a placeholder)
 - [ ] Connect a custom domain in Vercel dashboard (Settings → Domains)
 - [ ] Run Google PageSpeed Insights on the live URL and confirm 90+ score
