@@ -7,21 +7,26 @@
   <meta name="description" content="The terms and conditions for using Prizm." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          fontFamily: {
+            display: ['"Schibsted Grotesk"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
           colors: {
-            ink: '#0f172a',
-            muted: '#64748b',
-            soft: '#f8fafc',
-            accent: '#6366f1',
-            'accent-dark': '#4f46e5',
-            'accent-light': '#eef2ff',
-            'purple-accent': '#a78bfa',
+            paper: '#F5F2EA',
+            canvas: '#FFFFFF',
+            ink: '#1B1916',
+            muted: '#6B665C',
+            line: '#E5E0D4',
+            night: '#14130F',
+            accent: '#6366F1',
+            'accent-dark': '#4F46E5',
+            'accent-soft': '#ECECFD',
           }
         }
       }
@@ -30,53 +35,51 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; }
-    .gradient-text {
-      background: linear-gradient(135deg, #6366f1, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    h1, h2, h3, .font-display { font-family: 'Schibsted Grotesk', sans-serif; }
+    .legal h2 {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: #1B1916;
+      margin-top: 3rem;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
     }
-    .glass {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(99, 102, 241, 0.1);
-    }
-    .transition-smooth { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    .legal h2 { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-top: 2.5rem; margin-bottom: 0.75rem; }
-    .legal p { color: #475569; line-height: 1.75; margin-bottom: 1rem; }
-    .legal ul { color: #475569; line-height: 1.75; margin-bottom: 1rem; padding-left: 1.25rem; list-style: disc; }
-    .legal li { margin-bottom: 0.4rem; }
-    .legal a { color: #6366f1; font-weight: 600; }
+    .legal p { color: #4a463e; line-height: 1.75; margin-bottom: 1rem; }
+    .legal ul { color: #4a463e; line-height: 1.75; margin-bottom: 1rem; padding-left: 1.5rem; list-style: disc; }
+    .legal li { margin-bottom: 0.5rem; }
+    .legal strong { color: #1B1916; font-weight: 600; }
+    .legal a { color: #6366F1; font-weight: 500; }
     .legal a:hover { text-decoration: underline; }
   </style>
 </head>
-<body class="bg-white text-ink antialiased">
+<body class="bg-paper text-ink antialiased">
 
 <!-- NAV -->
-<nav class="sticky top-0 z-50 glass transition-smooth">
-  <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="index.html" class="text-2xl font-extrabold gradient-text">Prizm</a>
-    <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-accent transition-smooth">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-      </svg>
+<nav class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-line">
+  <div class="max-w-5xl mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a href="/" class="font-display text-2xl font-extrabold tracking-tight text-ink">Prizm</a>
+    <a href="/" class="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-ink transition-colors">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
       Back to home
     </a>
   </div>
 </nav>
 
 <!-- HEADER -->
-<header class="bg-gradient-to-b from-soft to-accent-light/40 py-16 px-6 text-center">
+<header class="px-6 pt-16 pb-10 sm:pt-20 sm:pb-14 border-b border-line">
   <div class="max-w-3xl mx-auto">
-    <span class="inline-block text-xs font-bold tracking-widest uppercase text-accent mb-3">Legal</span>
-    <h1 class="text-4xl font-extrabold text-ink mb-3">Terms of Service</h1>
+    <p class="inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-5">
+      <span class="w-6 h-px bg-accent"></span>Legal
+    </p>
+    <h1 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.08] mb-4">Terms of Service</h1>
     <p class="text-muted">Last updated: May 22, 2026</p>
   </div>
 </header>
 
 <!-- CONTENT -->
-<main class="max-w-3xl mx-auto px-6 py-14 legal">
-  <p>Welcome to Prizm. These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the Prizm proposal generation service (the &ldquo;Service&rdquo;). By creating an account or using the Service, you agree to these Terms. If you do not agree, please do not use Prizm.</p>
+<main class="max-w-3xl mx-auto px-6 py-14 sm:py-16 legal">
+  <p class="text-lg leading-relaxed mb-2">Welcome to Prizm. These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the Prizm proposal generation service (the &ldquo;Service&rdquo;). By creating an account or using the Service, you agree to these Terms. If you do not agree, please do not use Prizm.</p>
 
   <h2>1. The Service</h2>
   <p>Prizm provides software that helps creative agencies and freelancers generate client proposals. We may update, improve, or modify the Service at any time to keep it useful and secure.</p>
@@ -126,16 +129,21 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="py-10 px-6 bg-gradient-to-br from-ink to-slate-900 text-slate-400">
-  <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-    <a href="index.html" class="text-xl font-extrabold gradient-text">Prizm</a>
-    <div class="flex items-center gap-6">
-      <a href="index.html#pricing" class="hover:text-white transition-smooth">Pricing</a>
-      <a href="privacy.html" class="hover:text-white transition-smooth">Privacy Policy</a>
-      <a href="terms.html" class="hover:text-white transition-smooth">Terms</a>
-      <a href="mailto:hello@proposalkit.io" class="hover:text-white transition-smooth">Contact</a>
+<footer class="bg-night text-paper">
+  <div class="max-w-6xl mx-auto px-6 py-14">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <a href="/" class="font-display text-2xl font-extrabold tracking-tight text-paper">Prizm</a>
+      <div class="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm">
+        <a href="/#pricing" class="text-paper/65 hover:text-paper transition-colors">Pricing</a>
+        <a href="/privacy" class="text-paper/65 hover:text-paper transition-colors">Privacy</a>
+        <a href="/terms" class="text-paper/65 hover:text-paper transition-colors">Terms</a>
+        <a href="mailto:hello@proposalkit.io" class="text-paper/65 hover:text-paper transition-colors">Contact</a>
+      </div>
     </div>
-    <p class="text-xs text-slate-600">&copy; 2026 Prizm. All rights reserved.</p>
+    <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-paper/40">
+      <span>&copy; 2026 Prizm. All rights reserved.</span>
+      <span>Made for freelancers and small studios.</span>
+    </div>
   </div>
 </footer>
 
